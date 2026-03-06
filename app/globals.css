@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
+  /* Palet Warna Sesuai Gambar */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+
+  --color-green: #00d26a;
+  --color-white: #f5f5f5;
+  --color-black: #000000;
+  --color-neon: #ccff00;
+  --color-orange: #ffcc00;
+  --color-yellow: #f8e71c;
+
+  /* Neobrutalism Borders & Shadows */
+  --bw: 3px;
+  --shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-heading: var(--font-lexend);
+  --font-body: var(--font-syne);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Custom Colors */
+  --color-neo-green: var(--color-green);
+  --color-neo-neon: var(--color-neon);
+  --color-neo-orange: var(--color-orange);
+  --color-neo-yellow: var(--color-yellow);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-syne), sans-serif;
+}
+
+/* Typography Utility */
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-lexend), sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
 }
