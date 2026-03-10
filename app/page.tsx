@@ -1,48 +1,43 @@
-export default function HeroSection() {
+"use client";
+import { Heading } from "@/components/ui/Heading";
+import { Button } from "@/components/ui/Button";
+import HeroSection from "@/components/layout/HeroSection";
+
+export default function Home() {
   return (
-    <section className="min-h-[80vh] bg-white flex items-center p-6 md:p-12 border-b-[6px] border-black overflow-hidden">
-      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <div className="flex flex-col">
-          <div className="mb-4">
-            <p className="font-body text-base border-b-2 border-black inline-block pb-1">
-              Welcome to{" "}
-              <span className="text-neo-green font-bold">Manajerku.id</span>
-            </p>
-          </div>
+    <div className="p-10 space-y-8 bg-brand-light min-h-screen">
+      <HeroSection />
+      {/* Heading Level 1 */}
+      <Heading level="h1">
+        Edukasi <br /> Tanpa Batas
+      </Heading>
 
-          <h1 className="font-heading text-3xl md:text-4xl leading-tight tracking-tight text-black mb-6">
-            the best solution for <br />
-            your business finances <br />
-            with <span className="text-neo-green">a practical template</span>
-          </h1>
+      <div className="flex flex-col gap-4 w-fit">
+        {/* Button sebagai Link (Internal/External) */}
+        <Button href="/produk" variant="kuning">
+          Lihat Produk (Kuning)
+        </Button>
 
-          <p className="font-body text-base md:text-lg text-black/80 max-w-lg leading-relaxed mb-8">
-            memberikan sistem manajemen profesional namun sederhana. pelaku
-            usaha hanya perlu sekali bayar untuk mendapatkan alat pencatatan
-            keuangan, inventaris, dan asisten pembuat konten pemasaran tanpa
-            biaya langganan bulanan
-          </p>
+        {/* Button sebagai Button Biasa (Action) */}
+        <Button variant="hijau" onClick={() => alert("Halo Mario!")}>
+          Daftar Sekarang (Hijau)
+        </Button>
 
-          <div className="flex gap-4">
-            <button className="neo-button bg-neo-green px-8 py-3 text-lg uppercase">
-              Dapatkan Sekarang
-            </button>
-          </div>
-        </div>
-
-        <div className="relative grid grid-cols-2 gap-3 h-[380px]">
-          <div className="neo-card bg-neo-white mt-16 h-[260px] flex items-center justify-center border-black">
-            <div className="w-16 h-16 bg-neo-neon border-[3px] border-black rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"></div>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <div className="neo-card bg-neo-white h-[200px] border-black"></div>
-            <div className="neo-card bg-neo-white h-[200px] border-black"></div>
-          </div>
-
-          <div className="absolute -top-8 -right-8 w-24 h-24 bg-neo-yellow border-[4px] border-black rotate-12 -z-10 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"></div>
-        </div>
+        {/* Button Outline */}
+        <Button variant="outline" href="#faq">
+          Tanya Jawab
+        </Button>
       </div>
-    </section>
+
+      {/* Heading di background gelap */}
+      <div className="bg-brand-green p-10 mt-10 border-3 border-black shadow-[10px_10px_0px_0px_#f8e71c]">
+        <Heading level="h2" isInverse>
+          Detail Produk Kami
+        </Heading>
+        <p className="text-brand-light font-body mt-4">
+          Penjelasan materi secara mendalam.
+        </p>
+      </div>
+    </div>
   );
 }
