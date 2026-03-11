@@ -17,8 +17,8 @@ export const Heading = ({
   const baseStyles =
     "font-heading uppercase font-extrabold leading-[0.9] tracking-tighter";
   const levelStyles = {
-    h1: "text-5xl md:text-7xl",
-    h2: "text-3xl md:text-6xl",
+    h1: "text-4xl md:text-6xl",
+    h2: "text-3xl md:text-5xl",
     h3: "text-2xl md:text-4xl",
   };
   const colorStyles = isInverse ? "text-brand-light" : "text-brand-green";

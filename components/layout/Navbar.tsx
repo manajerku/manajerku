@@ -14,11 +14,11 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-brand-light border-b-4 border-black px-6 py-4">
+    <nav className="sticky top-0 z-50 w-full bg-(--color-primary) border-b-4 border-black px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* LOGO SECTION */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative w-10 h-10 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-none group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all bg-white">
+          <div className="relative w-10 h-10 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-none group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-all bg-white">
             <Image
               src="/logo/logo.png"
               alt="Logo"
@@ -26,7 +26,7 @@ export const Navbar = () => {
               className="object-contain p-1"
             />
           </div>
-          <span className="font-heading text-xl md:text-2xl tracking-tighter text-brand-green">
+          <span className="font-heading text-xl md:text-2xl tracking-tighter text-white">
             MANAJERKU
           </span>
         </Link>
@@ -37,7 +37,7 @@ export const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="font-heading text-sm uppercase hover:text-brand-accent transition-colors border-b-2 border-transparent hover:border-black">
+              className="font-heading text-sm uppercase text-white hover:text-(--color-accent) transition-colors border-b-2 border-transparent hover:border-black">
               {link.name}
             </Link>
           ))}
@@ -45,13 +45,13 @@ export const Navbar = () => {
 
         {/* MOBILE MENU BUTTON */}
         <button
-          className="md:hidden p-2 border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] cursor-pointer"
+          className="md:hidden p-2 border-2 border-white bg-[var(--color-primary) shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}>
           {/* Sederhanakan icon burger */}
           <div className="space-y-1">
-            <div className="w-6 h-1 bg-black"></div>
-            <div className="w-6 h-1 bg-black"></div>
-            <div className="w-6 h-1 bg-black"></div>
+            <div className="w-6 h-1 bg-white"></div>
+            <div className="w-6 h-1 bg-white"></div>
+            <div className="w-6 h-1 bg-white"></div>
           </div>
         </button>
       </div>
@@ -64,7 +64,7 @@ export const Navbar = () => {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="font-heading text-xl uppercase border-b-2 border-transparent active:border-black">
+              className="font-heading text-xl uppercase text-black border-b-2 border-transparent active:border-black">
               {link.name}
             </Link>
           ))}
