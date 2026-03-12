@@ -28,7 +28,7 @@ export default function HeroSection() {
         <Button variant="kuning" href="#product">
           Selengkapnya
         </Button>
-        <Button variant="hijau" onClick={() => alert("Halo Mario!")}>
+        <Button variant="hijau" href="https://lynk.id/manajerku.id">
           Beli Sekarang
         </Button>
       </div>

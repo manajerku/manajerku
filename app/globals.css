@@ -26,6 +26,9 @@
   --color-neo-orange: var(--color-orange);
   --color-neo-yellow: var(--color-yellow);
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--background);

@@ -21,7 +21,7 @@ export const Heading = ({
     h2: "text-3xl md:text-5xl",
     h3: "text-2xl md:text-4xl",
   };
-  const colorStyles = isInverse ? "text-brand-light" : "text-brand-green";
+  const colorStyles = isInverse ? "text-white" : "text-primary";
 
   return (
     <Tag
