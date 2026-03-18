@@ -6,7 +6,8 @@
 
   --color-primary: #18432a;
   --color-secondary: #588157;
-  --color-accent: #ccff00;
+  /* --color-accent: #ccff00; */
+  --color-accent: #fce321;
   --color-white: #ece8de;
   --color-black: #000000;
   --color-neon: #ccff00;
@@ -25,6 +26,10 @@
   --color-neo-neon: var(--color-neon);
   --color-neo-orange: var(--color-orange);
   --color-neo-yellow: var(--color-yellow);
+}
+
+* {
+  cursor: none;
 }
 html {
   scroll-behavior: smooth;
@@ -56,11 +61,11 @@ h4,
 }
 
 .marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
 .marquee-reverse {
-  animation: marquee-reverse 20s linear infinite;
+  animation: marquee-reverse 15s linear infinite;
 }
 
 @keyframes marquee-reverse {

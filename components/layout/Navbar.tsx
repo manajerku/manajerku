@@ -8,8 +8,9 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
+    { name: "Home", href: "/" },
     { name: "Tentang", href: "#about" },
-    { name: "Produk", href: "#produk" },
+    { name: "Produk", href: "#product" },
     { name: "FAQ", href: "#faq" },
   ];
 

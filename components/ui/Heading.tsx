@@ -1,4 +1,5 @@
 import React from "react";
+import Magnetic from "./Magnetic";
 
 interface HeadingProps {
   children: React.ReactNode;
@@ -24,9 +25,11 @@ export const Heading = ({
   const colorStyles = isInverse ? "text-white" : "text-primary";
 
   return (
-    <Tag
-      className={`${baseStyles} ${levelStyles[level]} ${colorStyles} ${className}`}>
-      {children}
-    </Tag>
+    <Magnetic>
+      <Tag
+        className={`${baseStyles} ${levelStyles[level]} ${colorStyles} ${className}`}>
+        {children}
+      </Tag>
+    </Magnetic>
   );
 };

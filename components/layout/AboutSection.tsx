@@ -4,9 +4,10 @@ import { Heading } from "@/components/ui/Heading";
 import { useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/Badge";
 import Image from "next/image";
+import Magnetic from "../ui/Magnetic";
 
 const stats = [
-  { value: 50, suffix: "+", label: "UMKM Terdaftar" },
+  { value: 0, suffix: "%", label: "Rumus Manual" },
   { value: 100, suffix: "%", label: "Berbasis Praktek" },
   { value: 3, suffix: "x", label: "Lebih Cepat Kelola Keuangan" },
   { value: 24, suffix: "/7", label: "Akses Kapan Saja" },
@@ -82,12 +83,14 @@ export default function AboutSection() {
           </p>
 
           {/* Highlight box */}
-          <div className="border-4 border-black bg-(--color-primary) text--white p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-            <p className="font-heading text-lg text-(--background) uppercase tracking-wide">
-              &quot;Keuangan sehat, bisnis kuat — mulai dari pencatatan yang
-              benar.&quot;
-            </p>
-          </div>
+          <Magnetic>
+            <div className="border-4 border-black bg-(--color-primary) text--white p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+              <p className="font-heading text-lg text-(--background) uppercase tracking-wide">
+                &quot;Keuangan sehat, bisnis kuat — mulai dari pencatatan yang
+                benar.&quot;
+              </p>
+            </div>
+          </Magnetic>
         </div>
 
         {/* Right - Decorative Block */}
