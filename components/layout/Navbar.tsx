@@ -60,13 +60,13 @@ export const Navbar = () => {
 
       {/* MOBILE NAV DROPDOWN */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-brand-light border-b-4 border-black p-6 space-y-6 flex flex-col items-center animate-in slide-in-from-top duration-200">
+        <div className="md:hidden absolute top-full left-0 w-full bg-(--color-orange) border-b-4 border-black p-6 space-y-6 flex flex-col items-center animate-in slide-in-from-top duration-200">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="font-heading text-xl uppercase text-black border-b-2 border-transparent active:border-black">
+              className="font-heading text-xl uppercase text-black hover:text-(--color-primary) border-b-2 border-transparent active:border-black">
               {link.name}
             </Link>
           ))}
