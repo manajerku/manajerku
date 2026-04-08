@@ -23,7 +23,8 @@ export const Navbar = () => {
             <Image
               src="/logo/logo.png"
               alt="Logo"
-              fill
+              width={100}
+              height={100}
               className="object-contain p-1"
             />
           </div>

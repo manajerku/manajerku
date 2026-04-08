@@ -19,7 +19,11 @@ export default function FreeProdukSection() {
           <p className="font-body text-sm leading-relaxed text-white opacity-70 max-w-lg">
             {item.description}
           </p>
-          <Button href={item.href} variant="kuning" className="w-fit mt-2">
+          <Button
+            href={item.href}
+            target="blank"
+            variant="kuning"
+            className="w-fit mt-2">
             Download Gratis
           </Button>
         </div>

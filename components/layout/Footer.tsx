@@ -27,6 +27,7 @@ export default function Footer() {
                 src="/logo/logo.png"
                 alt="Logo"
                 fill
+                sizes="40px"
                 className="object-contain p-1"
               />
             </div>
@@ -90,7 +91,14 @@ export default function Footer() {
           © {new Date().getFullYear()} Manajerku. All rights reserved.
         </p>
         <p className="font-body text-xs text-white opacity-40">
-          Made with love untuk UMKM Indonesia
+          Developed by{" "}
+          <Link
+            href="https://manajerku.store"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-(--color-accent) hover:opacity-100 transition-all font-heading uppercase tracking-tighter">
+            Manajerku.store
+          </Link>
         </p>
       </div>
     </footer>

@@ -3,22 +3,80 @@ import { notFound } from "next/navigation";
 import { Heading } from "@/components/ui/Heading";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
+import Link from "next/link";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
 
-export default async function ProductPage({
+export default async function Page({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
+
   if (!product) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.title,
+    description: product.description,
+    image: product.image,
+    brand: {
+      "@type": "Brand",
+      name: "Manajerku",
+      url: "https://manajerku.store",
+      sameAs: ["https://manajerku.store", "https://kamapra.my.id"],
+    },
+    offers: [
+      {
+        "@type": "Offer",
+        url: "https://manajerku.store",
+        priceCurrency: "IDR",
+        price: product.price.replace(/[^\d]/g, ""),
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        url: `https://kamapra.my.id/product/${slug}`,
+        priceCurrency: "IDR",
+        price: product.price.replace(/[^\d]/g, ""),
+        availability: "https://schema.org/InStock",
+      },
+    ],
+  };
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* ── BREADCRUMBS ── */}
+      <nav className="bg-white border-b-4 border-black px-6 md:px-24 py-4">
+        <div className="max-w-4xl mx-auto flex items-center gap-2 font-heading text-sm uppercase tracking-tight">
+          <Link
+            href="/"
+            className="hover:text-(--color-primary) transition-colors">
+            Home
+          </Link>
+          <span className="text-black/30">/</span>
+          <Link
+            href="#"
+            className="hover:text-(--color-primary) transition-colors">
+            Produk
+          </Link>
+          <span className="text-black/30">/</span>
+          <span className="text-black truncate max-w-[150px] md:max-w-none">
+            {product.title}
+          </span>
+        </div>
+      </nav>
+
       {/* ── HERO ── */}
       <section className="border-b-4 border-black bg-(--color-primary) px-6 md:px-24 py-20">
         <div className="max-w-4xl mx-auto flex flex-col gap-6">
@@ -33,7 +91,7 @@ export default async function ProductPage({
             <div className="bg-(--color-neo-orange) border-4 border-black px-6 py-3 font-heading text-2xl shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
               {product.price}
             </div>
-            <Button href={product.href} variant="kuning">
+            <Button href={product.href} target="_blank" variant="kuning">
               ⬇ Akses Sekarang
             </Button>
           </div>
@@ -79,7 +137,7 @@ export default async function ProductPage({
           </div>
         </section>
 
-        {/* ── KONTEN BLOG ── */}
+        {/* ── KONTEN PREVIEW ── */}
         {product.contentSections && (
           <section className="flex flex-col gap-10">
             <div className="border-l-8 border-(--color-neo-orange) pl-5">
@@ -93,11 +151,25 @@ export default async function ProductPage({
                 <p className="font-body text-base leading-relaxed opacity-80">
                   {section.body}
                 </p>
-                {/* Placeholder screenshot */}
-                <div className="w-full h-48 bg-(--color-primary) border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
-                  <span className="font-heading text-(--color-accent) text-sm uppercase tracking-widest">
-                    Screenshot Preview
-                  </span>
+
+                {/* Image Container: Tetap muncul meski section.image kosong */}
+                <div className="relative w-full aspect-video bg-(--color-primary) bg-opacity-5 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden flex items-center justify-center">
+                  {section.image ? (
+                    <Image
+                      src={section.image}
+                      alt={section.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 800px"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center gap-2 opacity-20">
+                      <span className="font-heading text-4xl">?</span>
+                      <span className="font-heading text-xs uppercase tracking-widest">
+                        No Preview Available
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -120,7 +192,7 @@ export default async function ProductPage({
                       {faq.question}
                     </p>
                   </div>
-                  <div className="bg-white) px-6 py-4 border-t-4 border-black">
+                  <div className="bg-white px-6 py-4 border-t-4 border-black">
                     <p className="font-body text-base leading-relaxed opacity-80">
                       {faq.answer}
                     </p>
@@ -145,13 +217,12 @@ export default async function ProductPage({
             <span className="font-heading text-2xl text-black border-2 border-black bg-white px-4 py-2 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
               {product.price}
             </span>
-            <Button href={product.href} variant="hijau">
+            <Button href={product.href} target="_blank" variant="hijau">
               Beli Sekarang
             </Button>
           </div>
         </section>
 
-        {/* Back */}
         <Button variant="outline" href="/" className="w-fit">
           ← Kembali ke Produk
         </Button>

@@ -102,6 +102,7 @@ export default function AboutSection() {
               width={150}
               height={150}
               priority
+              className="w-full h-auto"
             />
           </div>
           <div className="absolute bottom-8 right-8 w-24 h-24 bg-(--color-neo-orange) border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] -rotate-6" />

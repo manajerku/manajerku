@@ -43,6 +43,7 @@ export const products: Product[] = [
     contentSections: [
       {
         title: "1. Dashboard Performa Usaha",
+        image: "/Product/free-product.png",
         body: "Lihat ringkasan keuangan bisnis kamu dalam satu tampilan. Total pemasukan, pengeluaran, dan laba bersih tersaji otomatis setiap bulan.",
       },
       {
@@ -76,7 +77,7 @@ export const products: Product[] = [
       },
     ],
     href: "https://lynk.id/manajerku.id/pjmjov4dr396/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9",
-    image: "/product/free-product.png",
+    image: "/Product/free-product.png",
   },
   {
     slug: "pencatatan-keuangan-online",
@@ -125,6 +126,6 @@ export const products: Product[] = [
       },
     ],
     href: "https://lynk.id/manajerku.id/pjmjov4dr396/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9",
-    image: "/product/free-product.png",
+    image: "/Product/free-product.png",
   },
 ];

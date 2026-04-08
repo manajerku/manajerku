@@ -7,12 +7,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "hijau" | "kuning" | "outline";
   href?: string;
   className?: string;
+  target?: string;
 }
 
 export const Button = ({
   children,
   variant = "hijau",
   href,
+  target,
   className = "",
   ...props
 }: ButtonProps) => {
@@ -28,8 +30,13 @@ export const Button = ({
   const combinedClasses = `${baseStyles} ${variants[variant]} ${className}`;
 
   if (href) {
+    const isExternal = target === "_blank";
     return (
-      <Link href={href} className={combinedClasses}>
+      <Link
+        href={href}
+        className={combinedClasses}
+        target={target}
+        rel={isExternal ? "noopener noreferrer" : undefined}>
         {children}
       </Link>
     );
