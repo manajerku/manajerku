@@ -21,111 +21,143 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    slug: "laporan-keuangan-umkm",
-    title: "Laporan Keuangan UMKM Umum",
-    price: "Rp75.000",
+    slug: "template-laundry-premium",
+    title: "Template Laporan Keuangan UMKM Laundry",
+    price: "Rp30.000",
     description:
-      "Template pencatatan keuangan untuk UMKM yang membantu kamu mengelola dan membuat laporan usaha lebih efektif dan efisien.",
+      "Solusi cerdas kelola bisnis laundry dengan dashboard otomatis yang memantau pemasukan, pengeluaran, hingga target tahunan dalam satu tempat.",
     longDescription:
-      "Template lengkap untuk pencatatan keuangan UMKM. Cocok untuk usaha kecil menengah yang membutuhkan catatan keuangan dasar hingga laporan laba rugi bulanan.",
-    badge: "TERLARIS",
+      "Template ini dirancang khusus untuk operasional laundry, mencakup pencatatan layanan per kilo, manajemen pengeluaran rutin seperti deterjen dan sewa tempat, hingga visualisasi grafik performa bulanan dan tahunan. Memudahkan pemilik usaha melihat profitabilitas tanpa perlu rumus rumit.",
+    badge: "BARU!!",
     features: [
-      "Laporan Laba Rugi Otomatis",
-      "Pencatatan Pemasukan & Pengeluaran",
-      "Dashboard Performa Usaha",
-      "Laporan Bulanan & Tahunan",
+      "Dashboard Visual Interaktif",
+      "Pencatatan Pemasukan Berbasis Layanan",
+      "Kategorisasi Pengeluaran Operasional",
+      "Monitoring Selisih Target Pendapatan",
+      "Otomasi Laporan Bulanan & Tahunan",
     ],
     forWho: [
-      "Pemilik warung, toko, atau usaha rumahan",
-      "UMKM yang baru mulai mencatat keuangan",
-      "Pelaku usaha yang ingin laporan rapi tanpa akuntan",
+      "Pemilik jasa laundry kiloan atau satuan",
+      "Pengusaha laundry yang ingin pantau profit secara real-time",
+      "UMKM yang butuh manajemen kas rapi dan profesional",
     ],
     contentSections: [
       {
-        title: "1. Dashboard Performa Usaha",
-        image: "/Product/free-product.png",
-        body: "Lihat ringkasan keuangan bisnis kamu dalam satu tampilan. Total pemasukan, pengeluaran, dan laba bersih tersaji otomatis setiap bulan.",
+        title: "1. Dashboard Tahunan & Selisih Target",
+        image: "/Product/laundry/laundry (1).png",
+        body: "Pantau kesehatan finansial tahunan secara makro. Menampilkan total pemasukan, pengeluaran, keuntungan, hingga perbandingan realisasi pendapatan terhadap target tahunan yang ditetapkan.",
       },
       {
-        title: "2. Pencatatan Pemasukan & Pengeluaran",
-        body: "Input transaksi harian dengan mudah. Template ini sudah dilengkapi kategori yang bisa kamu sesuaikan dengan jenis usaha.",
+        title: "2. Dashboard Bulanan & Grafik Tren",
+        image: "/Product/laundry/laundry (2).png",
+        body: "Visualisasi data bulanan dengan grafik garis dan pie chart. Memudahkan kamu melihat perbandingan persentase pengeluaran vs pemasukan serta tren transaksi harian selama satu bulan penuh.",
       },
       {
-        title: "3. Laporan Laba Rugi Otomatis",
-        body: "Tidak perlu hitung manual. Laporan laba rugi terbentuk otomatis dari data yang sudah kamu input setiap hari.",
+        title: "3. Pencatatan Pemasukan Detail",
+        image: "/Product/laundry/laundry (3).png",
+        body: "Form input pesanan pelanggan yang lengkap, mencakup nama pelanggan, jenis layanan (cuci setrika, karpet, sepatu, dll), berat/jumlah, hingga status dan metode pembayaran (Cash/Transfer/QRIS).",
       },
       {
-        title: "4. Laporan Bulanan & Tahunan",
-        body: "Pantau tren bisnis kamu dari bulan ke bulan. Berguna untuk evaluasi dan pengambilan keputusan bisnis.",
+        title: "4. Manajemen Pengeluaran Operasional",
+        image: "/Product/laundry/laundry (4).png",
+        body: "Catat setiap biaya keluar mulai dari pembelian pewangi, deterjen, gas, biaya listrik/air, hingga sewa tempat secara sistematis agar tidak ada biaya yang terlewat.",
+      },
+      {
+        title: "5. Pusat Data & Pengaturan Layanan",
+        image: "/Product/laundry/laundry (5).png",
+        body: "Sheet khusus untuk mengatur jenis layanan dan harga per kilo, kategori pengeluaran, serta daftar bulan untuk memastikan konsistensi data di seluruh laporan.",
       },
     ],
     faqs: [
       {
-        question: "Template ini pakai aplikasi apa?",
+        question: "Apakah harga layanan bisa diubah?",
         answer:
-          "Template berbasis Google Sheets / Microsoft Excel, jadi bisa langsung dipakai tanpa install aplikasi tambahan.",
+          "Bisa. Kamu cukup mengubah daftar harga di sheet Data, dan semua perhitungan di sheet pemasukan akan otomatis mengikuti harga terbaru.",
       },
       {
-        question: "Apakah ada panduan penggunaannya?",
+        question: "Apakah bisa digunakan untuk lebih dari satu cabang?",
         answer:
-          "Ya, setiap pembelian sudah termasuk panduan penggunaan lengkap dalam bentuk PDF.",
+          "Satu template disarankan untuk satu cabang agar laporan laba rugi tetap akurat. Kamu bisa menduplikasi file untuk cabang lainnya.",
       },
       {
-        question: "Bisa dipakai untuk usaha apa saja?",
+        question: "Apakah mendukung pembayaran digital?",
         answer:
-          "Template ini cocok untuk semua jenis usaha kecil menengah — dari warung, toko online, jasa, hingga usaha kuliner.",
+          "Ya, template ini sudah menyediakan kategori metode pembayaran Cash, Transfer, dan QRIS untuk memudahkan rekonsiliasi bank.",
       },
     ],
-    href: "https://lynk.id/manajerku.id/pjmjov4dr396/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9",
-    image: "/Product/free-product.png",
+    href: "https://lynk.id/manajerku.id/exmx1pppdk4q/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9",
+    image: "/Product/laundry.png",
   },
   {
-    slug: "pencatatan-keuangan-online",
-    title: "Pencatatan Keuangan Usaha Online",
+    slug: "template-premium",
+    title: "Template Laporan Keuangan Pemium UMKM ",
     price: "Rp50.000",
     description:
-      "Template untuk pelaku usaha online yang ingin mengontrol inventori dan membuat catatan keuangan per platform.",
+      "Atur keuangan bisnismu lebih profesional dengan template khusus UMKM yang dilengkapi fitur manajemen stok dan analisis menu terlaris.",
     longDescription:
-      "Dirancang sederhana agar mudah digunakan berbagai kalangan. Cocok untuk usaha online seperti reseller, dropshipper, dan toko online.",
-    badge: "BARU",
+      "Template ini dirancang untuk UMKM, tidak hanya mencatat uang masuk dan keluar, tapi juga membantu kamu memantau stok produk secara otomatis dan melihat performa penjualan harian hingga tahunan dalam bentuk visual yang mudah dipahami.",
+    badge: "PREMIUM",
     features: [
-      "Manajemen Inventori Produk",
-      "Catatan Per Platform (Shopee, Tokopedia, dll)",
-      "Laporan Penjualan Bulanan",
-      "Rekap Keuntungan Bersih",
+      "Dashboard Visual Tahunan & Bulanan",
+      "Manajemen Stok Barang Masuk Otomatis",
+      "Tracking Penjualan Berdasarkan Menu",
+      "Analisis Grafik Tren Keuntungan",
+      "Input Pemasukan & Pengeluaran Harian",
     ],
     forWho: [
-      "Reseller dan dropshipper",
-      "Pemilik toko online multi-platform",
-      "Pelaku usaha yang ingin pantau stok & keuntungan",
+      "Pemilik warung makan, cafe, atau kedai kopi",
+      "Pengusaha catering atau bisnis makanan rumahan",
+      "UMKM yang butuh memantau stok bahan dan laba bersih sekaligus",
     ],
     contentSections: [
       {
-        title: "1. Manajemen Inventori Produk",
-        body: "Catat stok masuk dan keluar dengan mudah. Kamu bisa tahu kapan harus restok tanpa harus hitung manual.",
+        title: "1. Dashboard Tahunan & Analisis Keuntungan",
+        image: "/Product/premium/premium (1).png",
+        body: "Lihat performa bisnismu sepanjang tahun. Dashboard ini menyajikan total pemasukan, pengeluaran, saldo akhir, serta grafik tren laba bersih setiap bulannya untuk evaluasi strategi bisnis.",
       },
       {
-        title: "2. Catatan Per Platform",
-        body: "Pisahkan catatan penjualan dari Shopee, Tokopedia, Instagram, dan platform lainnya dalam satu file yang rapi.",
+        title: "2. Laporan Bulanan & Persentase Kas",
+        image: "/Product/premium/premium (2).png",
+
+        body: "Pantau detail harian dalam satu bulan tertentu. Lengkap dengan perbandingan persentase pemasukan vs pengeluaran melalui pie chart dan status keuntungan terhadap target penjualan.",
       },
       {
-        title: "3. Laporan Penjualan Bulanan",
-        body: "Rekap otomatis total penjualan per bulan per platform. Mudah untuk evaluasi platform mana yang paling menguntungkan.",
+        title: "3. Pencatatan Pemasukan & Menu Terjual",
+        image: "/Product/premium/premium (3).png",
+
+        body: "Input transaksi penjualan dengan detail nama menu, kategori, jumlah produk, hingga metode pembayaran digital seperti QRIS, DANA, dan BNI.",
+      },
+      {
+        title: "4. Manajemen Stok Barang Masuk",
+        image: "/Product/premium/premium (4).png",
+
+        body: "Sheet khusus untuk mencatat inventaris barang masuk setiap bulan. Data ini akan terintegrasi langsung dengan stok produk untuk memastikan ketersediaan bahan baku terjaga.",
+      },
+      {
+        title: "5. Inputan Data Master & Harga Modal",
+        image: "/Product/premium/premium (5).png",
+
+        body: "Atur daftar menu, kategori produk, harga jual, hingga harga modal (HPP) di satu tempat. Memudahkan sistem menghitung keuntungan kotor dan bersih secara otomatis tanpa input manual berulang kali.",
       },
     ],
     faqs: [
       {
-        question: "Apakah bisa dipakai untuk lebih dari satu toko?",
+        question: "Apakah stok berkurang otomatis saat ada penjualan?",
         answer:
-          "Bisa. Kamu tinggal duplikasi sheet untuk setiap toko atau platform yang kamu kelola.",
+          "Ya, template ini sudah dilengkapi rumus otomatis yang mengurangi stok produk berdasarkan jumlah pesanan yang diinput di sheet pemasukan.",
       },
       {
-        question: "Format filenya apa?",
+        question: "Bisa untuk mencatat gaji pegawai?",
         answer:
-          "File dikirim dalam format .xlsx (Excel) dan sudah kompatibel dengan Google Sheets.",
+          "Bisa. Kamu bisa mengkategorikan pengeluaran sebagai 'Gaji Pegawai' di sheet pengeluaran untuk melihat pengaruhnya terhadap laba bersih bulanan.",
+      },
+      {
+        question: "Gimana kalau saya punya banyak menu?",
+        answer:
+          "Template ini menyediakan baris yang banyak dan bisa kamu tambah sesuai kebutuhan daftar menu di tokomu.",
       },
     ],
-    href: "https://lynk.id/manajerku.id/pjmjov4dr396/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9",
-    image: "/Product/free-product.png",
+    href: "https://lynk.id/manajerku.id/gy9ynd63w10o/checkout?token=cGFyYW1zPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9",
+    image: "/Product/premium.png",
   },
 ];

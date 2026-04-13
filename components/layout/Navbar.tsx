@@ -49,7 +49,6 @@ export const Navbar = () => {
         <button
           className="md:hidden p-2 border-2 border-white bg-[var(--color-primary) shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}>
-          {/* Sederhanakan icon burger */}
           <div className="space-y-1">
             <div className="w-6 h-1 bg-white"></div>
             <div className="w-6 h-1 bg-white"></div>
