@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
 import ConsoleLog from "@/components/feature/ConsoleLog";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -43,6 +44,7 @@ export default function RootLayout({
         <ConsoleLog />
         <Analytics />
         <CustomCursor />
+        <SpeedInsights/>
         <Navbar />
         {children}
         <Footer />
