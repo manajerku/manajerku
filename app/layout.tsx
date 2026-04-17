@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
 import ConsoleLog from "@/components/feature/ConsoleLog";
+import { Analytics } from "@vercel/analytics/next";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="id" data-scroll-behavior="smooth">
       <body className={`${lexend.variable} ${syne.variable} antialiased`}>
         <ConsoleLog />
+        <Analytics />
         <CustomCursor />
         <Navbar />
         {children}
