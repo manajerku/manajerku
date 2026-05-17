@@ -25,32 +25,32 @@ export const products: Product[] = [
     title: "Template Laporan Keuangan UMKM Laundry",
     price: "Rp30.000",
     description:
-      "Solusi cerdas kelola bisnis laundry dengan dashboard otomatis yang memantau pemasukan, pengeluaran, hingga target tahunan dalam satu tempat.",
+      "Kelola keuangan usaha laundry lebih rapi dan terstruktur tanpa perlu ribet bikin rumus Excel sendiri. Template ini membantu mencatat pemasukan, pengeluaran, profit, hingga performa bisnis secara otomatis dalam satu dashboard yang mudah dipahami.",
     longDescription:
-      "Template ini dirancang khusus untuk operasional laundry, mencakup pencatatan layanan per kilo, manajemen pengeluaran rutin seperti deterjen dan sewa tempat, hingga visualisasi grafik performa bulanan dan tahunan. Memudahkan pemilik usaha melihat profitabilitas tanpa perlu rumus rumit.",
+      "Template laporan keuangan ini dirancang khusus untuk kebutuhan operasional bisnis laundry, baik kiloan maupun satuan. Seluruh sistem sudah terintegrasi mulai dari pencatatan transaksi pelanggan, pengeluaran operasional, monitoring keuntungan, hingga visualisasi performa bisnis melalui dashboard otomatis.\n\nKamu tidak perlu membuat rumus Excel dari nol atau menghitung laporan secara manual setiap bulan. Semua data akan terhubung otomatis sehingga memudahkan pemilik usaha melihat kondisi keuangan secara real-time.\n\nCocok digunakan untuk UMKM laundry yang ingin memiliki pencatatan keuangan lebih profesional, rapi, dan mudah dianalisis tanpa harus memiliki skill akuntansi.",
     badge: "BARU!!",
     features: [
-      "Dashboard Visual Interaktif",
-      "Pencatatan Pemasukan Berbasis Layanan",
-      "Kategorisasi Pengeluaran Operasional",
-      "Monitoring Selisih Target Pendapatan",
-      "Otomasi Laporan Bulanan & Tahunan",
+      "Dashboard otomatis untuk memantau omzet, pengeluaran, dan profit",
+      "Pencatatan transaksi laundry lengkap dengan status pembayaran",
+      "Rekap pengeluaran operasional lebih terstruktur dan mudah dianalisis",
+      "Grafik performa bulanan untuk melihat tren bisnis",
+      "Sistem laporan otomatis tanpa perlu membuat rumus manual",
     ],
     forWho: [
-      "Pemilik jasa laundry kiloan atau satuan",
-      "Pengusaha laundry yang ingin pantau profit secara real-time",
-      "UMKM yang butuh manajemen kas rapi dan profesional",
+      "Pemilik usaha laundry yang masih mencatat keuangan secara manual",
+      "UMKM laundry yang ingin laporan lebih rapi dan profesional",
+      "Pengusaha laundry yang ingin mengetahui profit bisnis dengan lebih jelas",
     ],
     contentSections: [
       {
         title: "1. Dashboard Tahunan & Selisih Target",
         image: "/Product/laundry/laundry (1).png",
-        body: "Pantau kesehatan finansial tahunan secara makro. Menampilkan total pemasukan, pengeluaran, keuntungan, hingga perbandingan realisasi pendapatan terhadap target tahunan yang ditetapkan.",
+        body: "Lihat ringkasan performa bisnis dalam satu halaman. Dashboard ini menampilkan total pemasukan, total pengeluaran, laba bersih, hingga pencapaian target pendapatan tahunan secara otomatis.",
       },
       {
         title: "2. Dashboard Bulanan & Grafik Tren",
         image: "/Product/laundry/laundry (2).png",
-        body: "Visualisasi data bulanan dengan grafik garis dan pie chart. Memudahkan kamu melihat perbandingan persentase pengeluaran vs pemasukan serta tren transaksi harian selama satu bulan penuh.",
+        body: "Pantau perkembangan bisnis setiap bulan melalui grafik dan rekap otomatis. Memudahkan analisis tren pemasukan, pengeluaran, serta performa transaksi harian tanpa perlu menghitung manual.",
       },
       {
         title: "3. Pencatatan Pemasukan Detail",
