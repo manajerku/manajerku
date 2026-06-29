@@ -16,13 +16,13 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t-4 border-black bg-(--color-primary)">
+    <footer className="border-t-4 border-[var(--color-neo-black)] bg-[var(--color-neo-green-dark)]">
       {/* Main */}
-      <div className="max-w-7xl mx-auto px-6 md:px-16 py-16 grid grid-cols-1 md:grid-cols-3 gap-12 border-b-4 border-black">
+      <div className="max-w-7xl mx-auto px-6 md:px-16 py-16 grid grid-cols-1 md:grid-cols-3 gap-12 border-b-4 border-[var(--color-neo-black)]">
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
-            <div className="relative w-10 h-10 border-2 border-black bg-white">
+            <div className="relative w-10 h-10 border-2 border-[var(--color-neo-black)] bg-[var(--color-neo-cream)]">
               <Image
                 src="/logo/logo.png"
                 alt="Logo"
@@ -31,16 +31,18 @@ export default function Footer() {
                 className="object-contain p-1"
               />
             </div>
-            <span className="font-heading text-2xl text-white">MANAJERKU</span>
+            <span className="font-heading text-2xl text-[var(--color-neo-cream)]">
+              MANAJERKU
+            </span>
           </div>
-          <p className="font-body text-sm text-white opacity-60 leading-relaxed max-w-xs">
+          <p className="font-body text-sm text-[var(--color-neo-cream)] opacity-60 leading-relaxed max-w-xs">
             Solusi praktis manajemen keuangan untuk pelaku UMKM Indonesia.
           </p>
         </div>
 
         {/* Nav */}
         <div className="flex flex-col gap-4">
-          <p className="font-heading text-sm text-(--color-accent) uppercase tracking-widest">
+          <p className="font-heading text-sm text-[var(--color-neo-mustard)] uppercase tracking-widest">
             Navigasi
           </p>
           <div className="flex flex-col gap-3">
@@ -48,7 +50,7 @@ export default function Footer() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="font-body text-sm text-white opacity-70 hover:opacity-100 hover:text-(--color-accent) transition-all w-fit border-b-2 border-transparent hover:border-(--color-accent)">
+                className="font-body text-sm text-[var(--color-neo-cream)] opacity-70 hover:opacity-100 hover:text-[var(--color-neo-mustard)] transition-all w-fit border-b-2 border-transparent hover:border-[var(--color-neo-mustard)]">
                 {link.name}
               </Link>
             ))}
@@ -57,7 +59,7 @@ export default function Footer() {
 
         {/* Social */}
         <div className="flex flex-col gap-4">
-          <p className="font-heading text-sm text-(--color-accent) uppercase tracking-widest">
+          <p className="font-heading text-sm text-[var(--color-neo-mustard)] uppercase tracking-widest">
             Ikuti Kami
           </p>
           <div className="flex flex-col gap-3">
@@ -69,13 +71,13 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   className="flex items-center gap-3 w-fit group">
-                  <span className="w-9 h-9 border-2 border-white flex items-center justify-center group-hover:bg-(--color-accent) group-hover:border-(--color-accent) transition-colors">
+                  <span className="w-9 h-9 border-2 border-[var(--color-neo-cream)] flex items-center justify-center group-hover:bg-[var(--color-neo-mustard)] group-hover:border-[var(--color-neo-mustard)] transition-colors">
                     <Icon
                       size={18}
-                      className="text-white group-hover:text-black transition-colors"
+                      className="text-[var(--color-neo-cream)] group-hover:text-[var(--color-neo-black)] transition-colors"
                     />
                   </span>
-                  <span className="font-body text-sm text-white opacity-70 group-hover:opacity-100 group-hover:text-(--color-accent) transition-all">
+                  <span className="font-body text-sm text-[var(--color-neo-cream)] opacity-70 group-hover:opacity-100 group-hover:text-[var(--color-neo-mustard)] transition-all">
                     {s.name}
                   </span>
                 </Link>
@@ -87,16 +89,16 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="max-w-7xl mx-auto px-6 md:px-16 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-        <p className="font-body text-xs text-white opacity-40">
+        <p className="font-body text-xs text-[var(--color-neo-cream)] opacity-40">
           © {new Date().getFullYear()} Manajerku. All rights reserved.
         </p>
-        <p className="font-body text-xs text-white opacity-40">
+        <p className="font-body text-xs text-[var(--color-neo-cream)] opacity-40">
           Developed by{" "}
           <Link
             href="https://manajerku.store"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-(--color-accent) hover:opacity-100 transition-all font-heading uppercase tracking-tighter">
+            className="hover:text-[var(--color-neo-mustard)] hover:opacity-100 transition-all font-heading uppercase tracking-tighter">
             Manajerku.store
           </Link>
         </p>

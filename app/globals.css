@@ -1,36 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 :root {
+  /* Base */
   --background: #ece8de;
   --foreground: #000000;
 
-  --color-primary: #18432a;
-  --color-secondary: #588157;
-  /* --color-accent: #ccff00; */
-  --color-accent: #fce321;
+  /* Brand */
+  --color-primary: #588157;
+  --color-primary-dark: #2e3b2e;
+
+  /* Accent */
+  --color-brick: #c0674c;
+  --color-mustard: #d4a843;
+  --color-cream-light: #f5f1e8;
+
+  /* Neutrals */
   --color-white: #ece8de;
   --color-black: #000000;
-  --color-neon: #ccff00;
-  --color-orange: #ffcc00;
-  --color-yellow: #f8e71c;
 
+  /* Neo Brutalism tokens */
   --bw: 3px;
   --shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-green: 5px 5px 0px 0px #588157;
+  --shadow-brick: 5px 5px 0px 0px #c0674c;
 }
 
 @theme inline {
-  --font-heading: var(--font-lexend);
-  --font-body: var(--font-syne);
+  --font-heading: var(--font-bricolage-grotesque);
+  --font-body: var(--font-dm-sans);
 
-  --color-neo-green: var(--color-green);
-  --color-neo-neon: var(--color-neon);
-  --color-neo-orange: var(--color-orange);
-  --color-neo-yellow: var(--color-yellow);
+  /* Palette */
+  --color-neo-green: #588157;
+  --color-neo-green-dark: #2e3b2e;
+  --color-neo-brick: #c0674c;
+  --color-neo-mustard: #d4a843;
+  --color-neo-cream: #ece8de;
+  --color-neo-cream-light: #f5f1e8;
+  --color-neo-black: #000000;
 }
 
-* {
-  cursor: none;
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -38,7 +53,11 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-syne), sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -46,9 +65,12 @@ h2,
 h3,
 h4,
 .font-heading {
-  font-family: var(--font-lexend), sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  word-break: break-word;
 }
 
 @keyframes marquee {
@@ -61,11 +83,11 @@ h4,
 }
 
 .marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 50s linear infinite;
 }
 
 .marquee-reverse {
-  animation: marquee-reverse 15s linear infinite;
+  animation: marquee-reverse 25s linear infinite;
 }
 
 @keyframes marquee-reverse {

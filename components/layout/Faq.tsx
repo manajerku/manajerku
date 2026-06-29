@@ -19,7 +19,7 @@ function AccordionItem({
       {/* Question */}
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 bg-white hover:bg-(--color-accent) transition-colors duration-150 cursor-pointer">
+        className="w-full flex items-center justify-between gap-4 px-6 py-5 bg-white hover:bg-[var(--color-neo-mustard)] transition-colors duration-150 cursor-pointer">
         <span className="font-heading text-base uppercase text-left">
           {faq.question}
         </span>
@@ -35,7 +35,7 @@ function AccordionItem({
         className="grid transition-all duration-300 ease-in-out"
         style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}>
         <div className="overflow-hidden">
-          <div className="px-6 py-5 bg-(--color-accent) border-t-4 border-black">
+          <div className="px-6 py-5 bg-[var(--color-neo-mustard)] border-t-4 border-black">
             <p className="font-body text-base leading-relaxed text-black">
               {faq.answer}
             </p>
@@ -52,7 +52,7 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="border-t-4 border-black bg-(--color-primary) px-6 md:px-16 py-24">
+      className="border-t-4 border-black bg-[var(--color-neo-green)] px-6 md:px-16 py-24">
       <div className="max-w-3xl mx-auto flex flex-col gap-12">
         {/* Header */}
         <div className="flex flex-col gap-4">

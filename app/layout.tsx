@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
-import { Lexend, Syne } from "next/font/google";
+import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
 import ConsoleLog from "@/components/feature/ConsoleLog";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const lexend = Lexend({
-  variable: "--font-lexend",
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
-  weight: ["700", "800"],
+  weight: "variable",
+  display: "swap",
 });
 
-const syne = Syne({
-  variable: "--font-syne",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: "variable",
   display: "swap",
 });
 
@@ -40,11 +41,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" data-scroll-behavior="smooth">
-      <body className={`${lexend.variable} ${syne.variable} antialiased`}>
+      <body
+        className={`${bricolageGrotesque.variable} ${dmSans.variable} antialiased`}>
         <ConsoleLog />
         <Analytics />
         <CustomCursor />
-        <SpeedInsights/>
+        <SpeedInsights />
         <Navbar />
         {children}
         <Footer />

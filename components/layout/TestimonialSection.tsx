@@ -19,10 +19,10 @@ export default function TestimoniSection() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="flex gap-5 border-4 border-black bg-whitex_5px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translatehover:translate-x-1.25e-y-[5px] transition-all duration-150">
+              className="flex gap-5 border-[var(--bw)] border-[var(--color-neo-black)] bg-[var(--color-neo-cream-light)] p-6 shadow-[var(--shadow)] hover:shadow-none hover:translate-x-[5px] hover:translate-y-[5px] transition-all duration-150">
               {/* Avatar */}
-              <div className="shrink-0 w-14 h-14 bg-(--color-primary) border-4 border-black flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                <span className="font-heading text-xl text-(--color-accent)">
+              <div className="shrink-0 w-14 h-14 bg-[var(--color-neo-green)] border-[var(--bw)] border-[var(--color-neo-black)] flex items-center justify-center shadow-[3px_3px_0px_0px_var(--color-neo-black)]">
+                <span className="font-heading text-xl text-[var(--color-neo-mustard)]">
                   {t.name.charAt(0)}
                 </span>
               </div>
@@ -30,14 +30,14 @@ export default function TestimoniSection() {
               {/* Teks */}
               <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="font-heading text-base uppercase">
+                  <span className="font-heading text-base uppercase text-[var(--color-neo-black)]">
                     {t.name}
                   </span>
-                  <span className="bg-(--color-accent) border-2 border-black px-2 py-0 font-heading text-xs">
+                  <span className="bg-[var(--color-neo-mustard)] border-2 border-[var(--color-neo-black)] px-2 py-0.5 font-heading text-xs text-[var(--color-neo-black)]">
                     {t.role}
                   </span>
                 </div>
-                <p className="font-body text-sm leading-relaxed opacity-70">
+                <p className="font-body text-sm leading-relaxed text-[var(--color-neo-black)]/70">
                   &quot;{t.message}&quot;
                 </p>
               </div>

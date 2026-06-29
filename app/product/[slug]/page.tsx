@@ -61,13 +61,13 @@ export default async function Page({
         <div className="max-w-4xl mx-auto flex items-center gap-2 font-heading text-sm uppercase tracking-tight">
           <Link
             href="/"
-            className="hover:text-(--color-primary) transition-colors">
+            className="hover:text-[var(--color-neo-green)] transition-colors">
             Home
           </Link>
           <span className="text-black/30">/</span>
           <Link
             href="#"
-            className="hover:text-(--color-primary) transition-colors">
+            className="hover:text-[var(--color-neo-green)] transition-colors">
             Produk
           </Link>
           <span className="text-black/30">/</span>
@@ -78,7 +78,7 @@ export default async function Page({
       </nav>
 
       {/* ── HERO ── */}
-      <section className="border-b-4 border-black bg-(--color-primary) px-6 md:px-24 py-20">
+      <section className="border-b-4 border-black bg-[var(--color-neo-green)] px-6 md:px-24 py-20">
         <div className="max-w-4xl mx-auto flex flex-col gap-6">
           {product.badge && <Badge>{product.badge}</Badge>}
           <Heading level="h1" isInverse>
@@ -88,10 +88,10 @@ export default async function Page({
             {product.description}
           </p>
           <div className="flex items-center gap-6 flex-wrap mt-2">
-            <div className="bg-(--color-neo-orange) border-4 border-black px-6 py-3 font-heading text-2xl shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+            <div className="bg-[var(--color-neo-brick)] border-4 border-black px-6 py-3 font-heading text-2xl shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
               {product.price}
             </div>
-            <Button href={product.href} target="_blank" variant="kuning">
+            <Button href={product.href} target="_blank" variant="mustard">
               ⬇ Akses Sekarang
             </Button>
           </div>
@@ -102,7 +102,7 @@ export default async function Page({
         {/* ── UNTUK SIAPA ── */}
         {product.forWho && (
           <section className="flex flex-col gap-6">
-            <div className="border-l-8 border-(--color-neo-orange) pl-5">
+            <div className="border-l-8 border-[var(--color-neo-brick)] pl-5">
               <Heading level="h2">Untuk Siapa Template Ini?</Heading>
             </div>
             <div className="flex flex-col gap-3">
@@ -110,7 +110,7 @@ export default async function Page({
                 <div
                   key={i}
                   className="flex items-center gap-4 border-2 border-black bg-white px-5 py-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                  <span className="w-6 h-6 bg-(--color-accent) border-2 border-black shrink-0" />
+                  <span className="w-6 h-6 bg-[var(--color-neo-mustard)] border-2 border-black shrink-0" />
                   <span className="font-body text-base">{who}</span>
                 </div>
               ))}
@@ -120,15 +120,15 @@ export default async function Page({
 
         {/* ── FITUR ── */}
         <section className="flex flex-col gap-6">
-          <div className="border-l-8 border-(--color-neo-orange) pl-5">
+          <div className="border-l-8 border-[var(--color-neo-brick)] pl-5">
             <Heading level="h2">Apa Yang Kamu Dapat</Heading>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {product.features.map((f, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 border-4 border-black bg-(--color-primary) px-5 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <span className="font-heading text-(--color-accent) text-xl">
+                className="flex items-center gap-4 border-4 border-black bg-[var(--color-neo-green)] px-5 py-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <span className="font-heading text-[var(--color-neo-mustard)] text-xl">
                   ✦
                 </span>
                 <span className="font-body text-white text-base">{f}</span>
@@ -140,7 +140,7 @@ export default async function Page({
         {/* ── KONTEN PREVIEW ── */}
         {product.contentSections && (
           <section className="flex flex-col gap-10">
-            <div className="border-l-8 border-(--color-neo-orange) pl-5">
+            <div className="border-l-8 border-[var(--color-neo-brick)] pl-5">
               <Heading level="h2">Isi Template</Heading>
             </div>
             {product.contentSections.map((section, i) => (
@@ -153,7 +153,7 @@ export default async function Page({
                 </p>
 
                 {/* Image Container: Tetap muncul meski section.image kosong */}
-                <div className="relative w-full aspect-video bg-(--color-primary) bg-opacity-5 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden flex items-center justify-center">
+                <div className="relative w-full aspect-video bg-[var(--color-neo-green)] bg-opacity-5 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden flex items-center justify-center">
                   {section.image ? (
                     <Image
                       src={section.image}
@@ -179,7 +179,7 @@ export default async function Page({
         {/* ── FAQ ── */}
         {product.faqs && (
           <section className="flex flex-col gap-6">
-            <div className="border-l-8 border-(--color-neo-orange) pl-5">
+          <div className="border-l-8 border-[var(--color-neo-brick)] pl-5">
               <Heading level="h2">Pertanyaan Umum</Heading>
             </div>
             <div className="flex flex-col gap-4">
@@ -187,8 +187,8 @@ export default async function Page({
                 <div
                   key={i}
                   className="border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="bg-(--color-primary) px-6 py-4">
-                    <p className="font-heading text-base text-(--color-accent) uppercase">
+                  <div className="bg-[var(--color-neo-green)] px-6 py-4">
+                    <p className="font-heading text-base text-[var(--color-neo-mustard)] uppercase">
                       {faq.question}
                     </p>
                   </div>
@@ -204,7 +204,7 @@ export default async function Page({
         )}
 
         {/* ── CTA BOTTOM ── */}
-        <section className="border-4 border-black bg-(--color-neo-orange) p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col md:flex-row items-center justify-between gap-6">
+        <section className="border-4 border-black bg-[var(--color-neo-brick)] p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col gap-1">
             <p className="font-heading text-xl uppercase text-black">
               Siap Kelola Keuangan Lebih Rapi?
